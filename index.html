@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inana Food Company</title>
+
+  <!-- LINK CSS -->
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+
+
+
+  <!-- navbar -->
+  <nav class="navbar">
+
+    <!-- LOGO -->
+    <div class="logo">
+      <img src="images/Logo.png" alt="Logo">
+    </div>
+
+    <!-- NAV LINKS -->
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#" class="active">Home</a></li>
+      <li><a href="#">My Story</a></li>
+      <li><a href="#">Become A Distributor</a></li>
+      <li><a href="#">Order Now</a></li>
+      <li><a href="#">Our Products</a></li>
+      <li><a href="#">Contact Us</a></li>
+    </ul>
+
+    <!-- RIGHT SIDE -->
+    <div class="nav-right">
+
+      <!-- CART -->
+      <div class="cart">
+        <svg viewBox="0 0 24 24">
+          <path d="M7 4h-2l-1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 
+                0 1.1.9 2 2 2h12v-2h-11.42c-.14 0-.25-.11-.25-.25l.03-.12 
+                .9-1.63h7.72c.75 0 1.41-.41 
+                1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 
+                0-.55-.45-1-1-1h-16.31l-.94-2zm3 
+                16c-1.1 0-2 .9-2 2s.9 2 2 
+                2 2-.9 2-2-.9-2-2-2zm8 
+                0c-1.1 0-2 .9-2 2s.9 2 2 
+                2 2-.9 2-2-.9-2-2-2z" />
+        </svg>
+      </div>
+
+      <!-- HAMBURGER -->
+      <div class="hamburger" onclick="toggleMenu()">
+        <svg viewBox="0 0 24 24">
+          <path  stroke-width="2" stroke-linecap="round" d="M3 6h18M3 12h18M3 18h18" />
+        </svg>
+      </div>
+
+    </div>
+
+  </nav>
+
+
+  <!-- end of nav bar  -->
+
+
+
+
+
+  <!-- hero section -->
+  <section class="hero">
+
+    <!-- LEFT CONTENT -->
+    <div class="hero-text" data-aos="fade-right">
+
+      <!-- <span class="badge" data-aos="fade-down" data-aos-delay="100">
+        Premium Quality 100%
+      </span> -->
+
+      <h1 data-aos="fade-up" data-aos-delay="200">
+        Missed MTN Shares<br>
+        <span>Buy Inana <br> Today</span>
+      </h1>
+
+      <!-- <p data-aos="fade-up" data-aos-delay="300">
+        Discover premium quality food products sourced from the finest suppliers.
+        From aromatic spices to wholesome grains, we bring authentic flavors to your kitchen.
+      </p> -->
+
+      <div class="hero-buttons" data-aos="fade-up" data-aos-delay="400">
+        <a href="#" class="btn primary">Buy Inana</a>
+        <!-- <a href="#" class="btn outline">View Products</a> -->
+      </div>
+
+    </div>
+
+    <!-- RIGHT IMAGE -->
+    <div class="hero-image" data-aos="fade-left" data-aos-delay="500">
+      <img src="images/Inna rice image.png" alt="Rice Image">
+    </div>
+
+  </section>
+  <!-- end of hero -->
+
+
+
+
+
+
+
+  <!-- FEATURES SECTION -->
+  <section class="features">
+    <div class="container">
+      <!-- Feature 1 -->
+      <div class="feature-item" data-aos="fade-up" data-aos-delay="100">
+        <div class="icon">
+          <!-- Star SVG -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#e21c06" width="40" height="40">
+            <path
+              d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.902 1.45 8.319L12 18.896l-7.386 4.631 1.45-8.319-6.064-5.902 8.332-1.151z" />
+          </svg>
+        </div>
+        <h3>Premium Quality</h3>
+        <p>100% authentic products sourced from trusted suppliers</p>
+      </div>
+
+      <!-- Feature 2 -->
+      <div class="feature-item" data-aos="fade-up" data-aos-delay="200">
+        <div class="icon">
+          <!-- Truck SVG -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#e21c06" width="40" height="40">
+            <path d="M3 3h15v13H3z" fill="none" />
+            <path
+              d="M20 8h-3V3H3v13h2a2 2 0 104 0h6a2 2 0 104 0h1a1 1 0 001-1v-5a1 1 0 00-1-1zm-2 7a1 1 0 110 2 1 1 0 010-2zm-12 0a1 1 0 110 2 1 1 0 010-2z" />
+          </svg>
+        </div>
+        <h3>Fast Delivery</h3>
+        <p>Quick and reliable delivery to your doorstep</p>
+      </div>
+
+      <!-- Feature 3 -->
+      <div class="feature-item" data-aos="fade-up" data-aos-delay="300">
+        <div class="icon">
+          <!-- Shield SVG -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#e21c06" width="40" height="40">
+            <path d="M12 2l7 4v6c0 5.25-3.78 9.94-7 11-3.22-1.06-7-5.75-7-11V6l7-4z" />
+          </svg>
+        </div>
+        <h3>Secure Shopping</h3>
+        <p>Safe and secure online shopping experience</p>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("active");
+    }
+  </script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000, // animation duration in ms
+      once: true,     // whether animation should happen only once - while scrolling down
+    });
+  </script>
+
+</body>
+
+</html>
