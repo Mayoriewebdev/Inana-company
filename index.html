@@ -7,7 +7,7 @@
   <title>Inana Food Company</title>
 
   <!-- LINK CSS -->
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="home.css">
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 
@@ -36,25 +36,11 @@
     <!-- RIGHT SIDE -->
     <div class="nav-right">
 
-      <!-- CART -->
-      <div class="cart">
-        <svg viewBox="0 0 24 24">
-          <path d="M7 4h-2l-1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 
-                0 1.1.9 2 2 2h12v-2h-11.42c-.14 0-.25-.11-.25-.25l.03-.12 
-                .9-1.63h7.72c.75 0 1.41-.41 
-                1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 
-                0-.55-.45-1-1-1h-16.31l-.94-2zm3 
-                16c-1.1 0-2 .9-2 2s.9 2 2 
-                2 2-.9 2-2-.9-2-2-2zm8 
-                0c-1.1 0-2 .9-2 2s.9 2 2 
-                2 2-.9 2-2-.9-2-2-2z" />
-        </svg>
-      </div>
 
       <!-- HAMBURGER -->
       <div class="hamburger" onclick="toggleMenu()">
         <svg viewBox="0 0 24 24">
-          <path  stroke-width="2" stroke-linecap="round" d="M3 6h18M3 12h18M3 18h18" />
+          <path stroke-width="2" stroke-linecap="round" d="M3 6h18M3 12h18M3 18h18" />
         </svg>
       </div>
 
@@ -70,203 +56,118 @@
 
 
 
-
-
-
   <section class="order-section">
 
     <!-- HEADLINE -->
-    <div class="headline">
-
-        <h1>
-            Missed 
-            <span class="logo-box">
-                <img src="images/mtn-logo.png" alt="MTN Logo">
-            </span>
-            shares?
-        </h1>
-
-        <h2>
-            Buy <span class="inana">Inana</span> today
-        </h2>
-
-    </div>
-
+   <div class="headline" data-aos="fade-down" data-aos-delay="200">
+  <img id="headlineSlider" src="images/Everyone gateway text.png" 
+       alt="Headline Image" class="headline-image">
+</div>
 
     <!-- BUY BUTTON -->
-    <a href="#" class="buy-btn">Buy Inana</a>
-
+    <a href="#" class="buy-btn" data-aos="zoom-in" data-aos-delay="400">Buy Inana</a>
 
     <!-- LOCATION SELECT -->
-    <div class="location-box">
-        <select>
-            <option selected>Select Location</option>
-
-            <option>Abia</option>
-            <option>Adamawa</option>
-            <option>Akwa Ibom</option>
-            <option>Anambra</option>
-            <option>Bauchi</option>
-            <option>Bayelsa</option>
-            <option>Benue</option>
-            <option>Borno</option>
-            <option>Cross River</option>
-            <option>Delta</option>
-            <option>Ebonyi</option>
-            <option>Edo</option>
-            <option>Ekiti</option>
-            <option>Enugu</option>
-            <option>FCT - Abuja</option>
-            <option>Gombe</option>
-            <option>Imo</option>
-            <option>Jigawa</option>
-            <option>Kaduna</option>
-            <option>Kano</option>
-            <option>Katsina</option>
-            <option>Kebbi</option>
-            <option>Kogi</option>
-            <option>Kwara</option>
-            <option>Lagos</option>
-            <option>Nasarawa</option>
-            <option>Niger</option>
-            <option>Ogun</option>
-            <option>Ondo</option>
-            <option>Osun</option>
-            <option>Oyo</option>
-            <option>Plateau</option>
-            <option>Rivers</option>
-            <option>Sokoto</option>
-            <option>Taraba</option>
-            <option>Yobe</option>
-            <option>Zamfara</option>
-
-        </select>
+    <div class="location-box" data-aos="fade-up" data-aos-delay="600">
+      <select>
+        <option selected>Select Location</option>
+        <option>Abia</option>
+        <option>Adamawa</option>
+        <option>Akwa Ibom</option>
+        <option>Anambra</option>
+        <option>Bauchi</option>
+        <option>Bayelsa</option>
+        <option>Benue</option>
+        <option>Borno</option>
+        <option>Cross River</option>
+        <option>Delta</option>
+        <option>Ebonyi</option>
+        <option>Edo</option>
+        <option>Ekiti</option>
+        <option>Enugu</option>
+        <option>FCT - Abuja</option>
+        <option>Gombe</option>
+        <option>Imo</option>
+        <option>Jigawa</option>
+        <option>Kaduna</option>
+        <option>Kano</option>
+        <option>Katsina</option>
+        <option>Kebbi</option>
+        <option>Kogi</option>
+        <option>Kwara</option>
+        <option>Lagos</option>
+        <option>Nasarawa</option>
+        <option>Niger</option>
+        <option>Ogun</option>
+        <option>Ondo</option>
+        <option>Osun</option>
+        <option>Oyo</option>
+        <option>Plateau</option>
+        <option>Rivers</option>
+        <option>Sokoto</option>
+        <option>Taraba</option>
+        <option>Yobe</option>
+        <option>Zamfara</option>
+      </select>
     </div>
-
 
     <!-- ORDER BUTTON -->
-    <a href="#" class="order-btn">
-    Order Now!
-    <span class="arrow">➤</span>
-</a>
-
+    <a href="#" class="order-btn" data-aos="fade-right" data-aos-delay="800">
+      Order Now! <span class="arrow">➤</span>
+    </a>
 
     <!-- SOCIAL ICONS -->
-    <div class="socials">
+    <div class="socials" data-aos="fade-up" data-aos-delay="1000">
 
-        <!-- Facebook -->
-        <a href="#">
-            <svg viewBox="0 0 24 24">
-                <path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H8v-2.89h2.44V9.41c0-2.42 
-                1.44-3.75 3.64-3.75 1.05 0 2.15.19 2.15.19v2.36h-1.21c-1.2 
-                0-1.58.75-1.58 1.52v1.83H16.1l-.42 
-                2.89h-2.24v6.99A10 10 0 0 0 22 12z"/>
-            </svg>
-        </a>
+      <!-- Facebook -->
+      <a href="#" data-aos="fade-up" data-aos-delay="1100">
+        <svg viewBox="0 0 24 24">
+          <path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H8v-2.89h2.44V9.41c0-2.42 
+      1.44-3.75 3.64-3.75 1.05 0 2.15.19 2.15.19v2.36h-1.21c-1.2 
+      0-1.58.75-1.58 1.52v1.83H16.1l-.42 
+      2.89h-2.24v6.99A10 10 0 0 0 22 12z" />
+        </svg>
+      </a>
 
-        <!-- Instagram -->
-        <a href="#">
-            <svg viewBox="0 0 24 24">
-                <path d="M7 2C4.24 2 2 4.24 2 7v10c0 2.76 2.24 5 
-                5 5h10c2.76 0 5-2.24 5-5V7c0-2.76-2.24-5-5-5H7zm5 
-                4a6 6 0 1 1 0 12 6 6 0 0 1 0-12zm0 
-                2a4 4 0 1 0 0 8 4 4 0 0 0 0-8z"/>
-            </svg>
-        </a>
+      <!-- Instagram -->
+      <a href="#" data-aos="fade-up" data-aos-delay="1200">
+        <svg viewBox="0 0 24 24">
+          <path d="M7 2C4.24 2 2 4.24 2 7v10c0 2.76 2.24 5 
+      5 5h10c2.76 0 5-2.24 5-5V7c0-2.76-2.24-5-5-5H7zm5 
+      4a6 6 0 1 1 0 12 6 6 0 0 1 0-12zm0 
+      2a4 4 0 1 0 0 8 4 4 0 0 0 0-8z" />
+        </svg>
+      </a>
 
-        <!-- TikTok -->
-        <a href="#">
-            <svg viewBox="0 0 24 24">
-                <path d="M16 2c.3 2.2 1.9 4 4 
-                4.3v3c-1.5 0-2.9-.5-4-1.3V15a5 
-                5 0 1 1-5-5c.3 0 .7 0 1 .1v3.1c-.3-.1-.6-.2-1-.2a2 
-                2 0 1 0 2 2V2h3z"/>
-            </svg>
-        </a>
+      <!-- TikTok -->
+      <a href="#" data-aos="fade-up" data-aos-delay="1300">
+        <svg viewBox="0 0 24 24">
+          <path d="M16 2c.3 2.2 1.9 4 4 
+      4.3v3c-1.5 0-2.9-.5-4-1.3V15a5 
+      5 0 1 1-5-5c.3 0 .7 0 1 .1v3.1c-.3-.1-.6-.2-1-.2a2 
+      2 0 1 0 2 2V2h3z" />
+        </svg>
+      </a>
 
-        <!-- Twitter -->
-        <a href="#">
-            <svg viewBox="0 0 24 24">
-                <path d="M18.9 2H22l-7.6 
-                8.7L23 22h-6.8l-5.3-6.9L4.7 
-                22H2l8.1-9.3L2 2h6.8l4.8 
-                6.3L18.9 2z"/>
-            </svg>
-        </a>
+      <!-- Twitter -->
+      <a href="#" data-aos="fade-up" data-aos-delay="1400">
+        <svg viewBox="0 0 24 24">
+          <path d="M18.9 2H22l-7.6 
+      8.7L23 22h-6.8l-5.3-6.9L4.7 
+      22H2l8.1-9.3L2 2h6.8l4.8 
+      6.3L18.9 2z" />
+        </svg>
+      </a>
 
-        <!-- WhatsApp -->
-        <a href="#">
-            <svg viewBox="0 0 24 24">
-                <path d="M12 2a10 10 0 0 0-8.94 
-                14.47L2 22l5.71-1.49A10 10 
-                0 1 0 12 2z"/>
-            </svg>
-        </a>
+      <!-- WhatsApp -->
+      <a href="#" data-aos="fade-up" data-aos-delay="1500">
+        <svg viewBox="0 0 24 24">
+          <path d="M12 2a10 10 0 0 0-8.94 
+      14.47L2 22l5.71-1.49A10 10 
+      0 1 0 12 2z" />
+        </svg>
+      </a>
 
-    </div>
-
-</section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <!-- FEATURES SECTION -->
-  <section class="features">
-    <div class="container">
-      <!-- Feature 1 -->
-      <div class="feature-item" data-aos="fade-up" data-aos-delay="100">
-        <div class="icon">
-          <!-- Star SVG -->
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#e21c06" width="40" height="40">
-            <path
-              d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.902 1.45 8.319L12 18.896l-7.386 4.631 1.45-8.319-6.064-5.902 8.332-1.151z" />
-          </svg>
-        </div>
-        <h3>Premium Quality</h3>
-        <p>100% authentic products sourced from trusted suppliers</p>
-      </div>
-
-      <!-- Feature 2 -->
-      <div class="feature-item" data-aos="fade-up" data-aos-delay="200">
-        <div class="icon">
-          <!-- Truck SVG -->
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#e21c06" width="40" height="40">
-            <path d="M3 3h15v13H3z" fill="none" />
-            <path
-              d="M20 8h-3V3H3v13h2a2 2 0 104 0h6a2 2 0 104 0h1a1 1 0 001-1v-5a1 1 0 00-1-1zm-2 7a1 1 0 110 2 1 1 0 010-2zm-12 0a1 1 0 110 2 1 1 0 010-2z" />
-          </svg>
-        </div>
-        <h3>Fast Delivery</h3>
-        <p>Quick and reliable delivery to your doorstep</p>
-      </div>
-
-      <!-- Feature 3 -->
-      <div class="feature-item" data-aos="fade-up" data-aos-delay="300">
-        <div class="icon">
-          <!-- Shield SVG -->
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#e21c06" width="40" height="40">
-            <path d="M12 2l7 4v6c0 5.25-3.78 9.94-7 11-3.22-1.06-7-5.75-7-11V6l7-4z" />
-          </svg>
-        </div>
-        <h3>Secure Shopping</h3>
-        <p>Safe and secure online shopping experience</p>
-      </div>
     </div>
   </section>
 
@@ -287,6 +188,8 @@
       once: true,     // whether animation should happen only once - while scrolling down
     });
   </script>
+
+<script src="home.js"></script>
 
 </body>
 
