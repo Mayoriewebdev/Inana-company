@@ -7,169 +7,295 @@
   <title>Inana Food Company</title>
 
   <!-- LINK CSS -->
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="home.css">
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  body {
+    background-image: url("images/Background.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+
+
+  /* LOADER SCREEN */
+
+  .loader-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  /* CENTER CONTENT */
+
+  .loader-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+
+  /* LOGO */
+
+  .loader-logo {
+    width: 300px;
+    max-width: 90%;
+
+    animation: logoFloat 2s ease-in-out infinite;
+  }
+
+
+  /* BADGE UNDER LOGO */
+
+  .loader-badge {
+    width: 60px;
+    margin-top: 80px;
+
+    /* animation:badgeFade 2s ease-in-out infinite; */
+  }
+
+
+  /* LOGO FLOAT ANIMATION */
+
+  @keyframes logoFloat {
+
+    0% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-15px);
+    }
+
+    100% {
+      transform: translateY(0);
+    }
+
+  }
+
+
+  /* BADGE FADE ANIMATION */
+
+  @keyframes badgeFade {
+
+    0% {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+
+    50% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    100% {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+
+  }
+</style>
 
 <body>
 
+  <!-- loader -->
+  <div class="loader-wrapper" id="loader">
+    <div class="loader-content">
+      <!-- LOGO -->
+      <img src="images/Logo.png" class="loader-logo" alt="Inana Logo">
 
-
-  <!-- navbar -->
-  <nav class="navbar">
-
-    <!-- LOGO -->
-    <div class="logo">
-      <img src="images/Logo.png" alt="Logo">
+      <!-- TRUSTED BADGE -->
+      <img src="images/Trusted brand icon.png" class="loader-badge" alt="Trusted Brand">
     </div>
-
-    <!-- NAV LINKS -->
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#" class="active">Home</a></li>
-      <li><a href="#">My Story</a></li>
-      <li><a href="#">Become A Distributor</a></li>
-      <li><a href="#">Order Now</a></li>
-      <li><a href="#">Our Products</a></li>
-      <li><a href="#">Contact Us</a></li>
-    </ul>
-
-    <!-- RIGHT SIDE -->
-    <div class="nav-right">
+  </div>
+  <!-- end of loader -->
 
 
-      <!-- HAMBURGER -->
-      <div class="hamburger" onclick="toggleMenu()">
-        <svg viewBox="0 0 24 24">
-          <path stroke-width="2" stroke-linecap="round" d="M3 6h18M3 12h18M3 18h18" />
-        </svg>
+
+
+
+
+  <div id="main-content">
+    <!-- navbar -->
+    <nav class="navbar">
+
+      <!-- LOGO -->
+      <div class="logo">
+        <img src="images/Logo.png" alt="Logo">
       </div>
 
-    </div>
+      <!-- NAV LINKS -->
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#">My Story</a></li>
+        <li><a href="#">Become A Distributor</a></li>
+        <li><a href="#">Order Now</a></li>
+        <li><a href="#">Our Products</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
 
-  </nav>
+      <!-- RIGHT SIDE -->
+      <div class="nav-right">
 
 
-  <!-- end of nav bar  -->
+        <!-- HAMBURGER -->
+        <div class="hamburger" onclick="toggleMenu()">
+          <svg viewBox="0 0 24 24">
+            <path stroke-width="2" stroke-linecap="round" d="M3 6h18M3 12h18M3 18h18" />
+          </svg>
+        </div>
+
+      </div>
+
+    </nav>
+
+
+    <!-- end of nav bar  -->
 
 
 
 
+    <section class="order-section">
+
+      <!-- HEADLINE -->
+      <div class="headline" data-aos="fade-down" data-aos-delay="200">
+        <img id="headlineSlider" src="images/Everyone gateway text.png" alt="Headline Image" class="headline-image">
+      </div>
+
+      <!-- BUY BUTTON -->
+      <a href="#" class="buy-btn" data-aos="zoom-in" data-aos-delay="400">Buy Inana</a>
+
+      <!-- LOCATION SELECT -->
+      <div class="location-box" data-aos="fade-up" data-aos-delay="600">
+        <select>
+          <option selected>Select Location</option>
+          <option>Abia</option>
+          <option>Adamawa</option>
+          <option>Akwa Ibom</option>
+          <option>Anambra</option>
+          <option>Bauchi</option>
+          <option>Bayelsa</option>
+          <option>Benue</option>
+          <option>Borno</option>
+          <option>Cross River</option>
+          <option>Delta</option>
+          <option>Ebonyi</option>
+          <option>Edo</option>
+          <option>Ekiti</option>
+          <option>Enugu</option>
+          <option>FCT - Abuja</option>
+          <option>Gombe</option>
+          <option>Imo</option>
+          <option>Jigawa</option>
+          <option>Kaduna</option>
+          <option>Kano</option>
+          <option>Katsina</option>
+          <option>Kebbi</option>
+          <option>Kogi</option>
+          <option>Kwara</option>
+          <option>Lagos</option>
+          <option>Nasarawa</option>
+          <option>Niger</option>
+          <option>Ogun</option>
+          <option>Ondo</option>
+          <option>Osun</option>
+          <option>Oyo</option>
+          <option>Plateau</option>
+          <option>Rivers</option>
+          <option>Sokoto</option>
+          <option>Taraba</option>
+          <option>Yobe</option>
+          <option>Zamfara</option>
+        </select>
+      </div>
+
+      <!-- ORDER BUTTON -->
+      <!-- <a href="#" class="order-btn" data-aos="fade-right" data-aos-delay="800">
+      Order Now! <span class="arrow">></span>
+    </a> -->
 
 
-  <section class="order-section">
+      <a href="#" class="order-btn" data-aos="fade-right" data-aos-delay="800">
+        <!-- Order Now! -->
+        <!-- <span class="arrow">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" viewBox="0 0 24 24">
+          <path d="M12 4l1.41 1.41L8.83 10H20v2H8.83l4.58 4.59L12 18l-8-8z" />
+        </svg> -->
+        </span>
+      </a>
 
-    <!-- HEADLINE -->
-   <div class="headline" data-aos="fade-down" data-aos-delay="200">
-  <img id="headlineSlider" src="images/Everyone gateway text.png" 
-       alt="Headline Image" class="headline-image">
-</div>
+      <!-- SOCIAL ICONS -->
+      <div class="socials" data-aos="fade-up" data-aos-delay="1000">
 
-    <!-- BUY BUTTON -->
-    <a href="#" class="buy-btn" data-aos="zoom-in" data-aos-delay="400">Buy Inana</a>
-
-    <!-- LOCATION SELECT -->
-    <div class="location-box" data-aos="fade-up" data-aos-delay="600">
-      <select>
-        <option selected>Select Location</option>
-        <option>Abia</option>
-        <option>Adamawa</option>
-        <option>Akwa Ibom</option>
-        <option>Anambra</option>
-        <option>Bauchi</option>
-        <option>Bayelsa</option>
-        <option>Benue</option>
-        <option>Borno</option>
-        <option>Cross River</option>
-        <option>Delta</option>
-        <option>Ebonyi</option>
-        <option>Edo</option>
-        <option>Ekiti</option>
-        <option>Enugu</option>
-        <option>FCT - Abuja</option>
-        <option>Gombe</option>
-        <option>Imo</option>
-        <option>Jigawa</option>
-        <option>Kaduna</option>
-        <option>Kano</option>
-        <option>Katsina</option>
-        <option>Kebbi</option>
-        <option>Kogi</option>
-        <option>Kwara</option>
-        <option>Lagos</option>
-        <option>Nasarawa</option>
-        <option>Niger</option>
-        <option>Ogun</option>
-        <option>Ondo</option>
-        <option>Osun</option>
-        <option>Oyo</option>
-        <option>Plateau</option>
-        <option>Rivers</option>
-        <option>Sokoto</option>
-        <option>Taraba</option>
-        <option>Yobe</option>
-        <option>Zamfara</option>
-      </select>
-    </div>
-
-    <!-- ORDER BUTTON -->
-    <a href="#" class="order-btn" data-aos="fade-right" data-aos-delay="800">
-      Order Now! <span class="arrow">➤</span>
-    </a>
-
-    <!-- SOCIAL ICONS -->
-    <div class="socials" data-aos="fade-up" data-aos-delay="1000">
-
-      <!-- Facebook -->
-      <a href="#" data-aos="fade-up" data-aos-delay="1100">
-        <svg viewBox="0 0 24 24">
-          <path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H8v-2.89h2.44V9.41c0-2.42 
+        <!-- Facebook -->
+        <a href="#" data-aos="fade-up" data-aos-delay="1100">
+          <svg viewBox="0 0 24 24">
+            <path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H8v-2.89h2.44V9.41c0-2.42 
       1.44-3.75 3.64-3.75 1.05 0 2.15.19 2.15.19v2.36h-1.21c-1.2 
       0-1.58.75-1.58 1.52v1.83H16.1l-.42 
       2.89h-2.24v6.99A10 10 0 0 0 22 12z" />
-        </svg>
-      </a>
+          </svg>
+        </a>
 
-      <!-- Instagram -->
-      <a href="#" data-aos="fade-up" data-aos-delay="1200">
-        <svg viewBox="0 0 24 24">
-          <path d="M7 2C4.24 2 2 4.24 2 7v10c0 2.76 2.24 5 
+        <!-- Instagram -->
+        <a href="#" data-aos="fade-up" data-aos-delay="1200">
+          <svg viewBox="0 0 24 24">
+            <path d="M7 2C4.24 2 2 4.24 2 7v10c0 2.76 2.24 5 
       5 5h10c2.76 0 5-2.24 5-5V7c0-2.76-2.24-5-5-5H7zm5 
       4a6 6 0 1 1 0 12 6 6 0 0 1 0-12zm0 
       2a4 4 0 1 0 0 8 4 4 0 0 0 0-8z" />
-        </svg>
-      </a>
+          </svg>
+        </a>
 
-      <!-- TikTok -->
-      <a href="#" data-aos="fade-up" data-aos-delay="1300">
-        <svg viewBox="0 0 24 24">
-          <path d="M16 2c.3 2.2 1.9 4 4 
+        <!-- TikTok -->
+        <a href="#" data-aos="fade-up" data-aos-delay="1300">
+          <svg viewBox="0 0 24 24">
+            <path d="M16 2c.3 2.2 1.9 4 4 
       4.3v3c-1.5 0-2.9-.5-4-1.3V15a5 
       5 0 1 1-5-5c.3 0 .7 0 1 .1v3.1c-.3-.1-.6-.2-1-.2a2 
       2 0 1 0 2 2V2h3z" />
-        </svg>
-      </a>
+          </svg>
+        </a>
 
-      <!-- Twitter -->
-      <a href="#" data-aos="fade-up" data-aos-delay="1400">
-        <svg viewBox="0 0 24 24">
-          <path d="M18.9 2H22l-7.6 
+        <!-- Twitter -->
+        <a href="#" data-aos="fade-up" data-aos-delay="1400">
+          <svg viewBox="0 0 24 24">
+            <path d="M18.9 2H22l-7.6 
       8.7L23 22h-6.8l-5.3-6.9L4.7 
       22H2l8.1-9.3L2 2h6.8l4.8 
       6.3L18.9 2z" />
-        </svg>
-      </a>
+          </svg>
+        </a>
 
-      <!-- WhatsApp -->
-      <a href="#" data-aos="fade-up" data-aos-delay="1500">
-        <svg viewBox="0 0 24 24">
-          <path d="M12 2a10 10 0 0 0-8.94 
-      14.47L2 22l5.71-1.49A10 10 
-      0 1 0 12 2z" />
-        </svg>
-      </a>
+        <!-- WhatsApp -->
+        <a href="#" data-aos="fade-up" data-aos-delay="1500">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="28" height="28" fill="#fff">
+            <path
+              d="M16 2C8.28 2 2 8.28 2 16c0 2.82.74 5.44 2.03 7.73L2 30l6.38-2.12A13.91 13.91 0 0 0 16 30c7.72 0 14-6.28 14-14S23.72 2 16 2zm7.11 19.3c-.3.84-1.74 1.61-2.43 1.71-.63.1-1.42.14-4.12-1.28-3.61-1.88-5.91-5.36-6.08-5.58-.17-.22-1.36-1.78-1.36-3.39 0-1.61.87-2.4 1.17-2.73.3-.33.67-.42.9-.42.23 0 .46 0 .66.01.21.02.49-.08.77.57.28.65.96 2.25 1.04 2.42.08.17.14.37.02.6-.12.22-.18.36-.35.57-.17.21-.35.46-.5.63-.17.18-.35.38-.15.75.2.37.88 1.45 1.88 2.34 1.3 1.18 2.38 1.55 2.73 1.73.36.18.57.15.78-.09.21-.24.91-1.06 1.15-1.42.24-.36.48-.3.8-.18.32.12 2.02.96 2.37 1.14.35.18.58.28.66.44.08.16.08.93-.22 1.77z" />
+          </svg>
+        </a>
 
-    </div>
-  </section>
+      </div>
+    </section>
+  </div>
 
 
 
@@ -181,6 +307,9 @@
   </script>
 
 
+
+
+
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script>
     AOS.init({
@@ -189,7 +318,21 @@
     });
   </script>
 
-<script src="home.js"></script>
+  <script src="home.js"></script>
+
+
+
+
+
+  <script>
+    window.addEventListener("load", () => {
+      setTimeout(() => {
+        document.getElementById("loader").style.display = "none"; // hide loader
+        document.getElementById("main-content").style.display = "block"; // show main content
+      }, 3000); // 3 seconds
+    });
+  </script>
+
 
 </body>
 
