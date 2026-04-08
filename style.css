@@ -6,12 +6,18 @@
 }
 
 body {
-    background-image: url("images/Background1.png");
+    background-image: url("images/background.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
+
+
+#main-content {
+  display: none;
+}
+
 
 /* NAVBAR */
 .navbar {
@@ -83,25 +89,8 @@ body {
     /* bring navbar above everything */
 }
 
-/* CART */
-.cart svg {
-    width: 22px;
-    height: 22px;
-    fill: #333;
-    cursor: pointer;
-    transition: 0.3s;
-}
 
-.cart svg:hover {
-    fill: #e21c06;
-}
 
-/* 
-.cart svg{
-    width:24px;
-    height:24px;
-    fill:#ffffff;
-} */
 
 /* HAMBURGER */
 .hamburger {
@@ -130,43 +119,64 @@ body {
 }
 
 /* ================= MOBILE ================= */
+/* ================= MOBILE ================= */
+/* MOBILE SIDEBAR WITH SHORT HEIGHT */
+/* MOBILE SIDEBAR WITH LEFT-ALIGNED TEXT */
 @media(max-width:900px) {
 
     .nav-links {
-        position: absolute;
-        top: 70px;
-        left: 0;
-        width: 100%;
-        background: #ffff;
+        position: fixed; /* stay fixed */
+        top: 70px; /* just below navbar */
+        right: -260px; /* hidden initially */
+        height: auto; /* adjust to content height */
+        min-height: 200px; /* optional minimum height */
+        width: 250px; /* sidebar width */
+        background: url('images/Icon.png') no-repeat center center;
+        background-size: cover;
+        border-radius: 25px; 
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start; /* LEFT align items */
+        justify-content: flex-start; 
+        padding: 20px 20px; /* padding on left and right */
         gap: 20px;
-        padding: 25px 0;
-        display: none;
-        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-    }
-
-    .nav-links.active {
         display: flex;
-        animation: fadeIn 0.3s ease-in-out;
+        transition: right 0.4s ease-in-out;
+        z-index: 1050;
     }
 
-    @keyframes fadeIn {
-        from {
-            opacity: 0;
-            transform: translateY(-10px);
-        }
-
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
+    /* Slide in when active */
+    .nav-links.active {
+        right: 10px;
     }
 
+    /* Links styling */
+    .nav-links li a {
+        color: #000;
+        font-weight: 600;
+        font-size: 16px;
+        text-shadow: 0 0 5px rgba(0,0,0,0.6); 
+        width: 100%; /* take full sidebar width */
+        text-align: left; /* align text to left */
+        padding-left: 10px; /* optional small padding */
+    }
+
+    .nav-links li a.active {
+        color: #ff4500;
+    }
+
+    .nav-links li a::after {
+        background: #ff4500;
+    }
+
+    /* Hamburger button */
     .hamburger {
         display: block;
+        position: relative;
+        z-index: 1100;
     }
 }
+
+
 
 /* EXTRA SMALL DEVICES */
 @media(max-width:500px) {
@@ -182,6 +192,13 @@ body {
 
 
 /* end navbar */
+
+
+
+
+
+
+
 
 
 
@@ -232,24 +249,31 @@ position:relative;
 
 /* BUY BUTTON */
 
-.buy-btn{
-display:inline-block;
-background:#ff1a1a;
-color:#fff;
-padding:16px 60px;
-border-radius:40px;
-font-size:22px;
-font-weight:bold;
-text-decoration:none;
-margin:30px 0;
-transition:0.3s;
+.buy-btn {
+  display: inline-block;
+  background: url('images/Buyinana.png') no-repeat center center; /* your button image */
+  background-size: cover; /* image fills the button area */
+  padding: 30px 120px; /* keeps original button size */
+  border-radius: 40px; /* rounded corners like before */
+  text-decoration: none; /* remove underline */
+  margin: 30px 0;
+  transition: 0.3s;
+  text-align: center;
+  color: transparent; /* hide text */
+  font-size: 0; /* hide any text content */
+  overflow: hidden; /* ensures rounded corners clip the image */
 }
 
-/* HOVER EFFECT */
-.buy-btn:hover{
-background:#cc0000;
-transform:translateY(-3px);
-box-shadow:0 10px 20px rgba(0,0,0,0.15);
+/* Hide any inner span if present */
+.buy-btn span {
+  display: none;
+}
+
+/* Hover effect */
+.buy-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  filter: brightness(0.9); /* slightly darken image on hover */
 }
 
 /* LOCATION */
@@ -264,48 +288,51 @@ margin-bottom:25px;
 
 /* ORDER BUTTON */
 
-.order-btn{
-background:#ffc933;
-border:none;
-padding:14px 35px;
-font-size:18px;
-border-radius:40px;
-cursor:pointer;
-display:inline-flex;
-align-items:center;
-gap:10px;
-font-weight:bold;
+.order-btn {
+  display: inline-block;
+  width: 170px; /* set width to match your image */
+  height: 50px; /* set height to match your image */
+  background: url('images/ordernow.png') no-repeat center center;
+  background-size: cover; /* makes image fill the button */
+  border-radius: 50px; /* optional: keep the rounded shape */
+  text-decoration: none; /* remove underline */
+  cursor: pointer;
+  border: none;
+  transition: transform 0.3s, filter 0.3s;
 }
 
-.arrow{
-background:black;
-color:white;
-border-radius:50%;
-padding:6px 10px;
+/* Hover effect */
+.order-btn:hover {
+  transform: translateY(-3px);
+  filter: brightness(0.9); /* slightly darken on hover */
 }
 
-/* SOCIAL ICONS */
-
-.socials{
-display:flex;
-justify-content:center;
-gap:14px;
-margin-top:30px;
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 30px;
 }
 
-.socials a{
-width:40px;
-height:40px;
-background:#000;
-border-radius:50%;
-display:flex;
-align-items:center;
-justify-content:center;
+.socials a {
+  width: 23px; /* increased circle size */
+  height: 23px;
+  background: #000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s; /* optional hover effect */
 }
 
-.socials svg{
-width:18px;
-fill:#fff;
+.socials a:hover {
+  transform: scale(1.1); /* makes icons pop on hover */
+}
+
+.socials svg {
+  width: 12px; /* increased icon size */
+  height: 12px;
+  fill: #fff;
 }
 
 /* end of section */
